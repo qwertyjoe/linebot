@@ -24,6 +24,7 @@ SECRET= os.environ['CHANNEL_SECRET']
 line_bot_api = LineBotApi(ACCESS_TOKEN)
 # Channel Secret
 handler = WebhookHandler(SECRET)
+pm_site = {}
 
 
 @app.route("/")
