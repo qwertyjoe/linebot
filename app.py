@@ -43,11 +43,11 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #message = TextSendMessage(text='Nice to meet you!')
-    #message2 = TextSendMessage(text=(event.source.user_id)) #reply userid
-    #line_bot_api.reply_message(event.reply_token, message2)
-    # message = TextSendMessage(text=event)
-    #print(event)
+    message = TextSendMessage(text='Nice to meet you!')
+    message2 = TextSendMessage(text=(event.source.user_id)) #reply userid
+    line_bot_api.reply_message(event.reply_token, message2)
+     #message = TextSendMessage(text=event)
+    print(event)
 
 
     msg = event.message.text
@@ -119,6 +119,7 @@ def getCls(cls_prefix):
 #         ret_cls = ret_cls + sub_url + "\n"
 
     return ret_cls
+
 
 import os
 if __name__ == "__main__":
