@@ -1,4 +1,10 @@
 from flask import Flask, request, abort
+
+import urllib.request, json
+import requests
+from bs4 import BeautifulSoup
+
+from flask import Flask, request, abort
 import os
 import sys
 from linebot import (
